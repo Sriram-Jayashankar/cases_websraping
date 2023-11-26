@@ -1,11 +1,26 @@
 from selenium import webdriver
 import time
-
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from bs4 import BeautifulSoup
 
+# Function to extract and write CNR numbers to the file
+def extract_and_write_cnr_numbers(html_doc, file_path):
+    soup = BeautifulSoup(html_doc, 'html.parser')
+    print(soup.title.string)
+
+    # Find all elements with class 'caseDetailsTD'
+    case_details_elements = soup.find_all(class_='caseDetailsTD')
+
+    # Extract CNR numbers from each element
+    cnr_numbers = [element.find('font', color='green').text.strip() for element in case_details_elements]
+
+    # Write the extracted CNR numbers to the file
+    with open(file_path, 'a') as file:
+        for cnr_number in cnr_numbers:
+            file.write(f"CNR Number: {cnr_number}\n")
 
 # Replace with your website URL
 website_url = 'https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/index&state_code=29~3&dist_code=1'
@@ -62,37 +77,35 @@ try:
     # Optionally, you can add a delay to wait for the search results to load
     time.sleep(20)
 
-    # Print the current URL (you can modify this to scrape the desired data)
-    page_source = driver.page_source    
+    # Set the number of pages to loop through
+    num_pages_to_scrape = 5
 
-    # Write the page source to an HTML file
-    with open('output_page1.html', 'w', encoding='utf-8') as file:
-        file.write(page_source)
-    print(driver.current_url)
-    # Write the page source to an HTML file (overwrite if the file already exists)
+    for _ in range(num_pages_to_scrape):
+        # Extract data from the current page
+        page_source = driver.page_source
+        with open('output_page1.html', 'w', encoding='utf-8') as file:
+            file.write(page_source)
+        print(driver.current_url)
 
-    #  # Example: Clicking the "Next" button
-    # next_button = WebDriverWait(driver, 10).until(
-    #     EC.presence_of_element_located((By.ID, 'example_pdf_next'))
-    # )
-    # next_button.click()
+        # Extract and write CNR numbers to the file
+        extract_and_write_cnr_numbers(page_source, 'cnr_numbers.txt')
 
-    # Click on the "Next" button
-    next_button = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, 'example_pdf_next'))
-    )
+        # Click on the "Next" button
+        next_button = WebDriverWait(driver, 10).until(
+            EC.element_to_be_clickable((By.ID, 'example_pdf_next'))
+        )
 
-    # Scroll the element into view
-    driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
+        # Scroll the element into view
+        driver.execute_script("arguments[0].scrollIntoView(true);", next_button)
 
-    # Wait for any overlays to disappear (you might need to adjust the sleep duration)
-    time.sleep(5)
+        # Wait for any overlays to disappear (you might need to adjust the sleep duration)
+        time.sleep(5)
 
-    # Click on the "Next" button
-    next_button.click()        
+        # Click on the "Next" button
+        next_button.click()
 
-    # Optionally, you can add a delay to wait for the next page to load
-    time.sleep(20)
+        # Optionally, you can add a delay to wait for the next page to load
+        time.sleep(20)
 
 finally:
     # Close the browser
