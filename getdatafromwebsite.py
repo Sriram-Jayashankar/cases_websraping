@@ -5,6 +5,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
 from bs4 import BeautifulSoup
+import csv
 
 # Function to extract and write CNR numbers to the file
 def extract_and_write_cnr_numbers(html_doc, file_path):
@@ -14,13 +15,30 @@ def extract_and_write_cnr_numbers(html_doc, file_path):
     # Find all elements with class 'caseDetailsTD'
     case_details_elements = soup.find_all(class_='caseDetailsTD')
 
-    # Extract CNR numbers from each element
-    cnr_numbers = [element.find('font', color='green').text.strip() for element in case_details_elements]
+    # Extract data for each entry
+    entries_data = []
+    for element in case_details_elements:
+        cnr = element.find('font', color='green').text.strip()
+        date_of_registration = get_element_text(element, ' Date of registration :')
+        decision_date = get_element_text(element, ' Decision Date :')
+        disposal_nature = get_element_text(element, ' Disposal Nature :')
+        court_name = element.find('span', style='opacity: 0.5;').text.strip()
 
-    # Write the extracted CNR numbers to the file
-    with open(file_path, 'a') as file:
-        for cnr_number in cnr_numbers:
-            file.write(f"CNR Number: {cnr_number}\n")
+        entries_data.append([cnr, date_of_registration, decision_date, disposal_nature, court_name])
+
+    # Write the extracted data to the CSV file
+    with open(file_path, 'a', newline='', encoding='utf-8') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerows(entries_data)
+
+# Function to get the text of the next sibling with the specified string
+def get_element_text(element, target_string):
+    target_element = element.find('span', string=target_string)
+    if target_element:
+        next_element = target_element.find_next('font', color='green')
+        if next_element:
+            return next_element.text.strip()
+    return None
 
 # Replace with your website URL
 website_url = 'https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/index&state_code=29~3&dist_code=1'
@@ -78,7 +96,7 @@ try:
     time.sleep(20)
 
     # Set the number of pages to loop through
-    num_pages_to_scrape = 5
+    num_pages_to_scrape = 1
 
     for _ in range(num_pages_to_scrape):
         # Extract data from the current page
@@ -88,7 +106,7 @@ try:
         print(driver.current_url)
 
         # Extract and write CNR numbers to the file
-        extract_and_write_cnr_numbers(page_source, 'cnr_numbers.txt')
+        extract_and_write_cnr_numbers(page_source, 'cnr_numbers.csv')
 
         # Click on the "Next" button
         next_button = WebDriverWait(driver, 10).until(
