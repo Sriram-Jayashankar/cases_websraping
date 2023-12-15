@@ -18,11 +18,11 @@ def extract_and_write_cnr_numbers(html_doc, file_path):
     # Extract data for each entry
     entries_data = []
     for element in case_details_elements:
-        cnr = element.find('font', color='green').text.strip()
-        date_of_registration = get_element_text(element, ' Date of registration :')
-        decision_date = get_element_text(element, ' Decision Date :')
-        disposal_nature = get_element_text(element, ' Disposal Nature :')
-        court_name = element.find('span', style='opacity: 0.5;').text.strip()
+        cnr = soup.find('span', style='color:#212F3D').find_next('font', color='green').text.strip()
+        date_of_registration = soup.find('span', string='Date of registration :').find_next('font', color='green').text.strip()
+        decision_date = soup.find('span', string='Decision Date :').find_next('font', color='green').text.strip()
+        disposal_nature = soup.find('span', string='Disposal Nature :').find_next('font', color='green').text.strip()
+        court_name = soup.find('span', style='opacity: 0.5;').text.strip()
 
         entries_data.append([cnr, date_of_registration, decision_date, disposal_nature, court_name])
 
@@ -31,13 +31,23 @@ def extract_and_write_cnr_numbers(html_doc, file_path):
         csv_writer = csv.writer(csvfile)
         csv_writer.writerows(entries_data)
 
-# Function to get the text of the next sibling with the specified string
-def get_element_text(element, target_string):
-    target_element = element.find('span', string=target_string)
-    if target_element:
-        next_element = target_element.find_next('font', color='green')
-        if next_element:
-            return next_element.text.strip()
+# def get_element_text(element, target_string):
+#     target_element = element.find('span', string=target_string)
+#     if target_element:
+#         next_element = target_element.find_next('font', color='green')
+#         if next_element:
+#             return next_element.text.strip()
+#     return None
+
+def get_element_url(element):
+    button = element.find('button', class_='btn-link')
+    if button:
+        onclick_value = button.get('onclick')
+        if onclick_value:
+            # Extracting the URL from the onclick attribute
+            start_index = onclick_value.find("'") + 1
+            end_index = onclick_value.rfind("'")
+            return onclick_value[start_index:end_index]
     return None
 
 # Replace with your website URL
@@ -85,18 +95,18 @@ try:
 
     time.sleep(5)
 
-    # Step 5: Select 1000 entries
-    entries_dropdown = WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.NAME, 'example_pdf_length'))
-    )
-    entries_select = Select(entries_dropdown)
-    entries_select.select_by_value('1000')
+    # # Step 5: Select 1000 entries
+    # entries_dropdown = WebDriverWait(driver, 10).until(
+    #     EC.presence_of_element_located((By.NAME, 'example_pdf_length'))
+    # )
+    # entries_select = Select(entries_dropdown)
+    # entries_select.select_by_value('1000')
 
     # Optionally, you can add a delay to wait for the search results to load
     time.sleep(20)
 
     # Set the number of pages to loop through
-    num_pages_to_scrape = 1
+    num_pages_to_scrape = 2
 
     for _ in range(num_pages_to_scrape):
         # Extract data from the current page
