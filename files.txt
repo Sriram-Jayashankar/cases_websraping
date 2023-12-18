@@ -1,0 +1,10 @@
+https://judgments.ecourts.gov.in//judgments_lib/tmp/33f64a173972f0f0685018862ddcf246ccb27d948ec526e7f80f14e8bb400e341702924458.pdf
+
+
+javascript:open_pdf('0','','cnrorders/taphc/orders/2017/HBHC010262202017_1_2047-06-29.pdf#page=&search=%20
+
+can be found in the link /judgments_lib/tmp/088f78545ae44a3147d15b9fffcc6e88af3619c227a57ea6a039cedda8c9feef1702924994.pdf
+https://judgments.ecourts.gov.in/ apppend it to this
+
+
+is there another way to extract the url 

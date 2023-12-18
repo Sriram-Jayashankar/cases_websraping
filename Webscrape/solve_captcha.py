@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
-
+import time
 
 #url
 
@@ -47,4 +47,4 @@ def solve_captcha(driver):
     # entries_select.select_by_value('1000')
 
     # Optionally, you can add a delay to wait for the search results to load
-    # time.sleep(20)
+    time.sleep(5)

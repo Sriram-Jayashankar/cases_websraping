@@ -1,0 +1,1584 @@
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="Judgements, Orders, High courts of India, High Courts">
+  <meta name="description" content="Judgements and Orders,  High Courts of India">
+  <meta name="title" content="Home | Judgements and Orders, High Courts of India">
+  <meta name="author" content="">
+  <title>Home | Judgements and Orders, Supreme Court and High courts of India</title>
+  <script src="/pdfsearch/vendor/jquery/jquery.min.js"></script>
+  <script src="/pdfsearch/vendor/jquery/jquery.validate.min.js"></script>
+
+  <script src="/pdfsearch/vendor/jquery/chosen.jquery.min.js"></script>
+
+  <link href="/pdfsearch/vendor/css/chosen.min.css" rel="stylesheet">
+
+  <script src="/pdfsearch/js/ecourts.js"></script>
+  <!--<script src="/pdfsearch/csrf-magic.js"></script>-->
+
+  <script src="/pdfsearch/vendor/jquery-date/js/jquery-ui.js"></script>
+  <link rel="stylesheet" href="/pdfsearch/vendor/jquery-date/jquery-ui.css">
+  <script src="/pdfsearch/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <link href="/pdfsearch/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/pdfsearch/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+  <link href="/pdfsearch/vendor/css/app.css" rel="stylesheet">
+
+
+  <!-- Custom styles for this template -->
+
+
+
+  <script>
+    var labels_array;
+    var buttons_array;
+    var alerts_array;
+    $(document).ready(function () {
+      $('.sidebar-nav').height($(window).height()) - 50;
+    });
+  </script>
+  <script src="/pdfsearch/vendor/DataTables/js/jquery.dataTables.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/Buttons/js/dataTables.buttons.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/js/dataTables.rowGroup.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/Buttons/js/buttons.flash.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/JSZip/jszip.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/pdfmake/pdfmake.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/pdfmake/vfs_fonts.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/Buttons/js/buttons.html5.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/Buttons/js/buttons.print.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/Buttons/js/buttons.colVis.min.js" type="text/javascript"></script>
+  <link rel="stylesheet" type="text/css" href="/pdfsearch/vendor/DataTables/css/rowGroup.dataTables.min.css">
+  <script src="/pdfsearch/vendor/DataTables/js/jquery.dataTables.yadcf.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/dataTables.responsive.min.js" type="text/javascript"></script>
+  <script src="/pdfsearch/vendor/DataTables/responsive.bootstrap4.min.js" type="text/javascript"></script>
+  <link href="/pdfsearch/vendor/DataTables/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="/pdfsearch/vendor/DataTables/responsive.bootstrap4.min.css" rel="stylesheet" type="text/css">
+  <link href="/pdfsearch/vendor/DataTables/datatables.css" rel="stylesheet" type="text/css">
+  <link href="/pdfsearch/vendor/DataTables/dataTable.css" rel="stylesheet" type="text/css">
+  <script>
+
+    $('select').addClass('form-control');
+    /* Code for set the stype to column
+    
+
+    jQuery.extend( jQuery.fn.dataTableExt.oSort, {
+    "date-uk-pre": function ( a ) {
+        var ukDatea = a.split('-');
+        return (ukDatea[2] + ukDatea[1] + ukDatea[0]) * 1;
+      },
+      "date-uk-asc": function ( a, b ) {
+        return ((a < b) ? -1 : ((a > b) ? 1 : 0));
+      },
+      "date-uk-desc": function ( a, b ) {
+        return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+      }
+    } );
+  
+        
+      "aoColumns": [
+      { "sSortDataType": "dom-text", "sType": "numeric" },
+      { "sType": "date-uk"},
+      {"sSortDataType": "dom-text"}]
+
+
+
+*/
+    jQuery.extend(jQuery.fn.dataTableExt.oSort, {
+      "date-uk-pre": function (a) {
+        var ukDatea = a.split('-');
+        return (ukDatea[2] + ukDatea[1] + ukDatea[0]) * 1;
+      },
+      "date-uk-asc": function (a, b) {
+        if (a == b) { return 0; }
+        if (isNaN(a) || a < b) { return -1; }
+        if (isNaN(b) || a > b) { return 1; }
+        //return ((a < b) ? -1 : (a == '')?-1 : ((a > b) ? 1 : 0));
+      },
+      "date-uk-desc": function (a, b) {
+        if (a == b) { return 0; }
+        if (isNaN(a) || a < b) { return 1; }
+        if (isNaN(b) || a > b) { return -1; }
+        //return ((a < b) ? 1 : ((a > b) ? -1 : 0));
+      }
+    });
+
+
+
+  </script>
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Responsive Datatable Bootstrap 4 -->
+
+
+
+
+
+
+<!-------------------------->
+
+
+
+
+
+
+<body style="" class="">
+  <div class="container-fluid topheader border-bottom">
+    <div class="row">
+      <div class="col-sm-9">
+        <ul class="pt-1">
+          <li><a class="js-scroll-trigger" href="#navbar-sm">Skip to navigation</a></li>
+          <li><a class="js-scroll-trigger" href="#main_content">Skip to main content</a></li>
+          <li class="border-right"><a href="javascript:void(0)" id="decresefont" title="Decrese Font Size"
+              aria-label="Decrese Font Size">A-</a></li>
+          <li><a href="javascript:void(0)" id="normalfont" title="Normal Font Size" aria-label="Normal Font Size">A</a>
+          </li>
+          <li><a href="javascript:void(0)" id="incresefont" title="Increse Font Size"
+              aria-label="Increse Font Size">A+</a></li>
+          <li><a href="#" class="whitelink" id="Defaultcontrast" title="Default contrast"
+              aria-label="normal contrast theme" onclick="$('body').removeClass('highcontrast')">A</a></li>
+          <li class="bg-dark"><a href="#" class="blacklink text-white" id="Highcontrast" title="High contrast"
+              aria-label="high contrast theme" onclick="$('body').addClass('highcontrast')">A</a></li>
+        </ul>
+      </div>
+      <div class="col-sm-3 text-end">
+        <select name="sel_lang" id="sel_lang" class="form-select form-select-sm chosen w-50 float-end" required=""
+          aria-describedby="Select_alert" onchange="changeLang(this.value)">
+          <option value="">English</option>
+
+          <option value="ASM">অসমীয়া - Assamese</option>
+          <option value="BEN">বাংলা - Bengali</option>
+          <option value="GAR">আ·চিক - Garo</option>
+          <option value="GUJ">ગુજરાતી - Gujarati</option>
+          <option value="HIN">हिन्दी - Hindi</option>
+          <option value="KAN">ಕನ್ನಡ - Kannada</option>
+          <option value="KAS">कॉशुर - Kashmiri</option>
+          <option value="KHA">খসি - Khasi</option>
+          <option value="KOK">कोंकणी - Konkani</option>
+          <option value="MAL">മലയാളം - Malayalam</option>
+          <option value="MAR">मराठी - Marathi</option>
+          <option value="NEP"> नेपाली - Nepali</option>
+          <option value="ORI">ଓଡ଼ିଆ - Odia</option>
+          <option value="PUN">ਪੰਜਾਬੀ - Punjabi</option>
+          <option value="TAM">தமிழ் - Tamil</option>
+          <option value="TEL">తెలుగు - Telugu</option>
+          <option value="URD">اُردُو - Urdu</option>
+
+        </select>
+      </div>
+      <!--?php// }?-->
+    </div>
+  </div>
+
+
+  <nav class="navbar navbar-expand-md mb-0" id="navbar-sm">
+    <div class="container-fluid">
+      <div class=" text-start w-25">
+        <a
+          href="/pdfsearch/?p=pdf_search/index&amp;escr_flag=&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">
+          <img src="images/emblem.png" alt="Emblem of India" class="float-start me-2 headimg"></a>
+
+        <a class="navbar-brand"
+          href="/pdfsearch/?p=pdf_search/index&amp;escr_flag=&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">
+          <span class="Maintitle">eSCR,Judgements and Orders</span><span class="Subtitle">Indian Judiciary</span></a>
+
+      </div>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse show" id="navbarCollapse">
+        <div class="input-group w-100 me-auto">
+          <select name="fcourt_type" id="fcourt_type" class="form-select form-select-sm chosen" required=""
+            aria-describedby="Select_alert">
+            <!--<option value="1" Selected>Supreme Court</option>--><!--?php// }else {?-->
+
+            <!-- <option value="1" >Supreme Court</option>-->
+            <option value="3">eSCR</option>
+            <option value="2" selected="">High Court</option>
+          </select> <input type="text" class="form-control ui-autocomplete-input" placeholder="Search within results"
+            aria-label="Free text search" id="search_text" value="a" style="width:30%;" onfocus="reg_lang('Y');"
+            title="" onblur="reg_lang('Y');" autocomplete="off">
+          <div class="pt-2 ms-3">
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="searchOptions" id="inlineRadio1" value="PHRASE"
+                checked="">
+              <label class="form-check-label" for="inlineRadio1">Phrase(s)</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="searchOptions" id="inlineRadio2" value="ANY"
+                disabled="disabled">
+              <label class="form-check-label" for="inlineRadio2">Any Words</label>
+            </div>
+
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="searchOptions" id="inlineRadio3" value="ALL">
+              <label class="form-check-label" for="inlineRadio3">All Words</label>
+            </div>
+          </div>
+          <select name="sel_prox" id="sel_prox" class="form-select form-select-sm ms-2"
+            style="width:60px !important;display:none;" ;="" required="" aria-describedby="Select_alert">
+            <option value="">Proximity</option>
+            <option value="20">20</option>
+            <option value="40">40</option>
+            <option value="60">60</option>
+            <option value="80">80</option>
+            <option value="100">100</option>
+
+          </select>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <script type="text/javascript" src="vendor/pramukhime/js/pramukhime.js"></script>
+  <script type="text/javascript" src="vendor/pramukhime/js/pramukhindic.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#incresefont').click(function () {
+        curSize = parseInt($('body').css('font-size')) + 2;
+        if (curSize <= 18)
+          $('body').css('font-size', curSize);
+      });
+
+      $('#decresefont').click(function () {
+        curSize = parseInt($('body').css('font-size')) - 2;
+        if (curSize >= 10)
+          $('body').css('font-size', curSize);
+      });
+
+      $("#normalfont").click(function () {
+        curSize = 14;
+        $("body").css("font-size", curSize);
+      });
+      /*
+        $('.blacklink').click(function (){
+          $('link[href="../css/my-style-SSS.css"]').attr('href','../css/contrast-style-SSS.css');
+        });
+        $('.whitelink').click(function (){
+          $('link[href="../css/contrast-style-SSS.css"]').attr('href','../css/my-style-SSS.css');
+        });
+      */
+    });
+  </script>
+
+  <div id="main_content">
+
+    <style>
+      #captcha_image {
+        width: 100px;
+      }
+
+      .page_links {
+        padding: 2px 10px;
+        text-decoration: none;
+        color: #111;
+        display: block;
+      }
+
+      .page_links:hover {
+        background: #ededed;
+        text-decoration: none;
+        color: #000;
+
+      }
+
+      #view-HTML .dropdown-toggle.nav-link.show {
+        border: 1px solid #ccc;
+      }
+
+      .show_bk_mk {
+        display: block !important;
+      }
+
+      .hide_bk_mk {
+        display: none !important;
+      }
+
+      .ncDisplay {
+        background: #508ee9;
+        padding: 1px 2px;
+        border-radius: 3px;
+        color: #fff;
+        font-weight: bold;
+        text-decoration: underline;
+        margin-left: 5px;
+        text-shadow: 1px 0px 0px rgb(0 0 0 / 40%);
+        border-left: 1px solid #1a4ac3;
+      }
+
+      #topbutton {
+        display: inline-block;
+        background-color: #fff;
+        width: 35px;
+        height: 35px;
+        text-align: center;
+        border-radius: 4px;
+        position: fixed;
+        bottom: 45px;
+        right: 12%;
+        transition: background-color .3s, opacity .5s, visibility .5s;
+        z-index: 1060;
+        color: #1e1d1d;
+        font-size: 1.3rem;
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      #topbutton:hover {
+        cursor: pointer;
+        background-color: #ccc;
+      }
+
+      #topbutton:active {
+        background-color: #ccc;
+      }
+
+      #topbutton.show {
+        opacity: 1;
+        visibility: visible;
+      }
+    </style>
+
+    <nav class="navbar navbar-expand border-bottom">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav  mb-2 mb-lg-0 text-start" id="filters">
+            <li class="nav-item dropdown me-3" id="court_details">
+              <a class="nav-link dropdown-toggle noToken" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-university"></i>&nbsp; Court </a>
+              <div class="dropdown-menu p-2 bg-light">
+                <div class="mb-1" id="div_state_sel">
+                  <label for="state_code" class="form-label fw-bold">Select Court </label>
+                  <select name="state_code" id="state_code" class="form-select form-select-sm chosen" required=""
+                    aria-describedby="Select_alert" onchange="get_distData('pdf_search/get_district',this.value);">
+                    <option value=""> Select Court </option>
+                    <option value="9~13">Allahabad High Court</option>
+                    <option value="27~1">Bombay High Court</option>
+                    <option value="19~16">Calcutta High Court</option>
+                    <option value="18~6">Gauhati High Court</option>
+                    <option value="36~29">High Court for State of Telangana</option>
+                    <option value="28~2">High Court of Andhra Pradesh</option>
+                    <option value="22~18">High Court of Chhattisgarh</option>
+                    <option value="7~26">High Court of Delhi</option>
+                    <option value="24~17">High Court of Gujarat</option>
+                    <option value="2~5">High Court of Himachal Pradesh</option>
+                    <option value="1~12">High Court of Jammu and Kashmir</option>
+                    <option value="20~7">High Court of Jharkhand</option>
+                    <option value="29~3">High Court of Karnataka</option>
+                    <option value="32~4">High Court of Kerala</option>
+                    <option value="23~23">High Court of Madhya Pradesh</option>
+                    <option value="14~25">High Court of Manipur</option>
+                    <option value="17~21">High Court of Meghalaya</option>
+                    <option value="21~11">High Court of Orissa</option>
+                    <option value="3~22">High Court of Punjab and Haryana</option>
+                    <option value="8~9">High Court of Rajasthan</option>
+                    <option value="11~24">High Court of Sikkim</option>
+                    <option value="16~20">High Court of Tripura</option>
+                    <option value="5~15">High Court of Uttarakhand</option>
+                    <option value="33~10">Madras High Court</option>
+                    <option value="10~8">Patna High Court</option>
+                  </select>
+                </div>
+
+                <div class="mb-1" id="div_dist_sel">
+                  <label for="dist_code" class="form-label fw-bold">Select Bench</label>
+                  <select name="dist_code" id="dist_code" class="form-select form-select-sm chosen" required=""
+                    aria-describedby="Select_alert" onchange="get_casetype('pdf_search/getCaseType',this.value);">
+
+                  </select>
+                </div>
+
+                <div class="mb-0">
+                  <label for="fulltext_case_type" class="form-label fw-bold">Case Type</label>
+                  <select name="fulltext_case_type" id="fulltext_case_type" class="form-select form-select-sm chosen"
+                    required="" aria-describedby="Select_alert">
+                    <option value="">Select Case Type</option>
+
+                  </select>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <label for="case_no" class="form-label fw-bold">Case No</label>
+                    <input class="form-control form-control-sm" type="text" name="case_no" id="case_no"
+                      autocomplete="off" placeholder="Enter Case Number" maxlength="7">
+                  </div>
+                  <div class="col-md-6">
+                    <label for="case_year" class="form-label fw-bold">Year</label>
+                    <input class="form-control form-control-sm" type="text" name="case_year" id="case_year"
+                      maxlength="4" autocomplete="off" placeholder="Enter Year">
+                  </div>
+                </div>
+                <div class="mb-0">
+                  <label for="pet_res" class="form-label fw-bold">Party</label>
+                  <input class="form-control form-control-sm" type="text" id="pet_res" maxlength="99" autocomplete="off"
+                    placeholder="Enter Petitioner / Respondent">
+                </div>
+                <div class="mb-0">
+                  <label for="disp_nature" class="form-label fw-bold">Disposal Nature</label>
+                  <select name="disp_nature" id="disp_nature" class="form-select form-select-sm chosen"
+                    aria-describedby="Select_alert">
+                    <option value="">Select Disposal Nature</option>
+                  </select>
+                </div>
+
+              </div>
+            </li>
+
+            <li class="nav-item dropdown  me-3">
+              <a class="nav-link dropdown-toggle noToken" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-user"></i>&nbsp; Judge </a>
+              <div class="dropdown-menu p-2 bg-light">
+                <label for="judge_txt" class="form-label fw-bold">Judge Name</label>
+                <input class="form-control form-control-sm ui-autocomplete-input" type="text" id="judge_txt"
+                  maxlength="99" autocomplete="off" placeholder="Enter Judge Name" onfocus="reg_lang('Y');" title=""
+                  onblur="reg_lang('Y');">
+              </div>
+            </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle noToken" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="other_filter">
+                <i class="fas fa-gavel"></i>&nbsp;Act/Section </a>
+              <div class="dropdown-menu p-2 bg-light">
+
+                <div class="mb-0">
+                  <label for="act_txt" class="form-label fw-bold">Act</label>
+                  <input class="form-control form-control-sm" type="text" id="act_txt" maxlength="99" autocomplete="off"
+                    placeholder="Enter Act">
+                </div>
+                <div class="mb-0">
+                  <label for="section_txt" class="form-label fw-bold">Section</label>
+                  <input class="form-control form-control-sm" type="text" id="section_txt" maxlength="99"
+                    autocomplete="off" placeholder="Enter Section">
+                </div>
+
+
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle noToken" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false" id="other_filter">
+                <i class="fas fa-calendar"></i>&nbsp; Decision Date </a>
+              <div class="dropdown-menu p-2 bg-light">
+
+                <div class="mb-0">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="ALL"
+                      checked="">
+                    <label class="form-check-label" for="exampleRadios1">
+                      ALL </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="WEEK">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Past Week </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="MONTH">
+                    <label class="form-check-label" for="exampleRadios3">
+                      Past Month </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="YEAR">
+                    <label class="form-check-label" for="exampleRadios4">
+                      Past Year </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios5"
+                      value="CUSTOM">
+                    <label class="form-check-label" for="exampleRadios5">
+                      Custom range </label>
+                  </div>
+                  <div class="row g-3 dec_date" style="display: none;">
+                    <div class="col-sm">
+                      <label class="visually-hidden" for="from_date">Decision from date</label>
+                      <input class="form-control form-control-sm hasDatepicker" style="display:inline-block;width:85%;"
+                        type="date" name="from_date" id="from_date" autocomplete="off" placeholder="dd-mm-yyyy">
+                    </div>
+                    <div class="col-sm">
+                      <label class="visually-hidden" for="to_date">Decision to date</label>
+                      <input class="form-control form-control-sm hasDatepicker" style="display:inline-block;width:85%;"
+                        type="date" name="to_date" id="to_date" autocomplete="off"
+                        placeholder="Enter To Date dd-mm-yyyy">
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+
+            <li class="nav-item dropdown  me-3" id="escr_details" style="display: none;">
+              <a class="nav-link dropdown-toggle noToken" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="fas fa-university"></i>&nbsp; eSCR </a>
+              <div class="dropdown-menu p-2 bg-light">
+                <label for="" class="form-label fw-bold">Citation Year/Vol OR Supl Vol/Page</label>
+                <div class="input-group mb-3 input-group-sm">
+                  <input class="form-control" type="text" maxlength="4" id="citation_year" autocomplete="off"
+                    placeholder="Year">
+                  <input class="form-control" type="text" id="citation_vol" autocomplete="off" placeholder="Vol">
+                  <span class="input-group-text">OR</span>
+                  <input class="form-control" type="text" id="citation_supl" autocomplete="off" placeholder="Supl">
+                  <input class="form-control" type="text" id="citation_page" autocomplete="off" placeholder="Page">
+
+                </div>
+
+                <label for="" class="form-label fw-bold">Neutral Citation</label>
+                <div class="input-group mb-3 input-group-sm">
+                  <input class="form-control" type="text" maxlength="4" id="neu_citation_year" autocomplete="off"
+                    placeholder="Neutral Citation Year">
+                  <span class="input-group-text">INSC</span>
+                  <input class="form-control" type="text" id="neu_no" autocomplete="off" placeholder="Number">
+
+                </div>
+                <div class="mb-0">
+                  <hr>
+                </div>
+                <label for="" class="form-label fw-bold">Case Type/Case No/Year</label>
+                <div class="input-group mb-3 input-group-sm">
+                  <select name="fulltext_case_type1" id="fulltext_case_type1" class="form-select chosen" required=""
+                    aria-describedby="Select_alert">
+                    <option value="">Select Case Type</option>&gt;
+
+                  </select>
+                  <input class="form-control" type="text" name="case_no1" id="case_no1" autocomplete="off"
+                    placeholder="Enter Case Number" maxlength="7">
+                  <input class="form-control" type="text" name="case_year1" id="case_year1" maxlength="4"
+                    autocomplete="off" placeholder="Enter Year">
+                </div>
+                <div class="mb-0">
+                  <label for="pet_res1" class="form-label fw-bold">Party</label>
+                  <input class="form-control form-control-sm" type="text" id="pet_res1" maxlength="99"
+                    autocomplete="off" placeholder="Enter Petitioner / Respondent">
+                </div>
+                <div class="mb-0" id="div_cit_keyword">
+                  <label for="citation_keywords" class="form-label fw-bold">Keywords</label>
+                  <input class="form-control form-control-sm" type="text" name="citation_keywords"
+                    id="citation_keywords" placeholder="Enter Keywords">
+                </div>
+              </div>
+            </li>
+            <!--<li class="nav-item dropdown  me-3" id="lang_details">
+                 
+    <select name="sel_lang" id="sel_lang" class="form-select form-select-sm chosen" required="" aria-describedby="Select_alert"><option value="">Translation</option>
+                
+                                                  <option value="ASM">অসমীয়া - Assamese</option>
+                                                                                                          <option value="BEN">বাংলা - Bengali</option>
+                                                                                                          <option value="GAR">আ·চিক - Garo</option>
+                                                                                                          <option value="GUJ">ગુજરાતી - Gujarati</option>
+                                                                                                          <option value="HIN">हिन्दी - Hindi</option>
+                                                                                                          <option value="KAN">ಕನ್ನಡ - Kannada</option>
+                                                                                                          <option value="KAS">कॉशुर - Kashmiri</option>
+                                                                                                          <option value="KHA">খসি - Khasi</option>
+                                                                                                          <option value="KOK">कोंकणी - Konkani</option>
+                                                                                                          <option value="MAL">മലയാളം - Malayalam</option>
+                                                                                                          <option value="MAR">मराठी - Marathi</option>
+                                                                                                          <option value="NEP"> नेपाली - Nepali</option>
+                                                                                                          <option value="ORI">ଓଡ଼ିଆ - Odia</option>
+                                                                                                          <option value="PUN">ਪੰਜਾਬੀ - Punjabi</option>
+                                                                                                          <option value="TAM">தமிழ் - Tamil</option>
+                                                                                                          <option value="TEL">తెలుగు - Telugu</option>
+                                                                                                          <option value="URD">اُردُو - Urdu</option>
+                                                                                
+        </select>
+
+        </li>-->
+
+
+
+
+          </ul>
+
+          <div class="row ms-3" id="captcha_div">
+
+            <div class="col-md-auto p-0"> <!--<img style="padding-right: 0px;border:1px solid #ccc;" id="captcha_image" src="" alt="CAPTCHA Image" tabindex="0" width="120"><div id="captcha_image_audio_div" style="display:inline">
+		<audio id="captcha_image_audio" preload="none" style="display: none">
+		<source id="captcha_image_source_wav" src="/judgementSearch/vendor/securimage/securimage_play.php?id=62fce01d9c8c2" type="audio/wav">
+		</audio>
+		</div>
+		<div id="captcha_image_audio_controls" style="display:inline-block;">
+		<a tabindex="0" class="captcha_play_button" href="/judgementSearch/vendor/securimage/securimage_play.php?id=62fce01d9c8ca&amp;app_token=1d6d3bf5cfc9995c8bec593db9784099b1b612faf64d3350d60d54c619c38472" onclick="return false">
+		<img class="captcha_play_image" height="32" width="32" src="/judgementSearch/vendor/securimage/images/speaker-btn.png" alt="Play CAPTCHA Audio" style="border: 0px">
+		<img class="captcha_loading_image rotating" height="32" width="32" src="/judgementSearch/vendor/securimage/images/loading.png" alt="Loading audio" style="display: none">
+		</a>
+		<noscript>Enable Javascript for audio controls</noscript>
+		</div>
+		<script src="/judgementSearch/vendor/securimage/securimage.js"></script>
+		<script>captcha_image_audioObj = new SecurimageAudio({ audioElement: 'captcha_image_audio', controlsElement: 'captcha_image_audio_controls' });</script>
+		<a tabindex="0" style="border: 0" href="#?app_token=1d6d3bf5cfc9995c8bec593db9784099b1b612faf64d3350d60d54c619c38472" title="Refresh Image" onclick="if (typeof window.captcha_image_audioObj !== 'undefined') captcha_image_audioObj.refresh(); document.getElementById('captcha_image').src = '/judgementSearch/vendor/securimage/securimage_show.php?' + Math.random(); this.blur(); return false"><img height="32" width="32" src="/judgementSearch/vendor/securimage/images/refresh-btn.png" alt="Refresh Image" onclick="clearCaptchaText();" style="border: 0px;"></a></div> <div class="col-md-3"><input maxlength="6" type="text" name="captcha" id="captcha" class="captchaClass form-control form-control-sm" placeholder="Enter captcha" tabindex="0" value='412583'></div>
+-->
+              <button class="btn btn-outline-secondary col-sm btn-sm me-1" type="button" id=""
+                onclick="get_details_searchclick('','','','');"><i class="fas fa-search"></i>&nbsp;Search</button>
+              <button class="btn btn-outline-secondary col-sm btn-sm" type="reset" id="" onclick="reset_page()"><i
+                  class="fas fa-undo"></i>&nbsp;Reset</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container-fluid mt-2">
+      <div class="row">
+        <div class="col-md-9">
+          <div class="container p-0" id="div_container">
+            <div class="row">
+              <div class="col-auto text-start" id="search_timer" style="color: #555;font-size:.9rem;font-weight:bold">
+                About 8828531 results (1 seconds)</div>
+              <div class="col text-start" id="breadcrumb" style="color: #555;font-size:.9rem;font-weight:bold">
+                <span class="badge rounded-pill text-bg-light border" style="display: inline-block;"
+                  id="bcrum_search_txt1">a&nbsp;&nbsp;<a href="#"
+                    onclick="$(&quot;#bcrum_search_txt1&quot;).html(&quot;&quot;);$(&quot;#search_text_1&quot;).val(&quot;&quot;);get_details(&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;);$(&quot;#bcrum_search_txt1&quot;).css(&quot;display&quot;,&quot;none&quot;);"><i
+                      class="fa fa-times text-dark"></i></a></span> <span id="breadcrumb_sp_1"
+                  style="display:none">→</span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_search_txt2"
+                  style="display:none"></span><span id="breadcrumb_sp_2" style="display:none">→</span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_search_txt3"
+                  style="display:none"></span><span id="breadcrumb_sp_3" style="display:none">→</span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_search_txt4"
+                  style="display:none"></span><span id="breadcrumb_sp_4" style="display:none">→</span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_search_txt5"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" style="display:none " id="bcrum_state"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_dist" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_judge" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_case_type" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_party" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_act" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_section" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_disp_nature"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_date" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_judge_val" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_year" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_judge_arr" style="display:none"></span>
+
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_citation_year"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_citation_vol"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_citation_supl"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_citation_page"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_cit_keyword"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_bench" style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_neu_cit_year"
+                  style="display:none"></span>
+                <span class="badge rounded-pill text-bg-light border" id="bcrum_neu_no" style="display:none"></span>
+
+
+              </div>
+            </div>
+          </div>
+          <div class="row m-2 border-bottom" id="disp_table" style="">
+
+            <div id="example_pdf_wrapper" class="dataTables_wrapper no-footer">
+              <div class="dataTables_length" id="example_pdf_length"><label>Show <select name="example_pdf_length"
+                    aria-controls="example_pdf" class="">
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                    <option value="1000">1,000</option>
+                  </select> entries</label></div>
+              <div id="example_pdf_processing" class="dataTables_processing" style="display: none;">
+                <div id="loaderbody">
+                  <div id="loader"></div>
+                </div>
+              </div>
+              <table id="example_pdf" class="table table-bordered table-responsive w-100 no-footer dataTable dtr-inline"
+                aria-describedby="example_pdf_info" style="" role="presentation">
+                <thead>
+                  <tr id="example_head" role="row" style="display: none;">
+                    <th class="sorting_asc" tabindex="0" aria-controls="example_pdf" rowspan="1" colspan="1"
+                      style="width: 0px;" aria-label=": activate to sort column descending" aria-sort="ascending"></th>
+                    <th class="sorting" tabindex="0" aria-controls="example_pdf" rowspan="1" colspan="1"
+                      style="width: 0px;" aria-label=": activate to sort column ascending"></th>
+                  </tr>
+                </thead>
+
+                <tbody id="report_body">
+                  <tr role="row" class="odd">
+                    <td class="sorting_1 dtr-control">1</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_0"
+                        aria-label="WP/9532/2017 of Tholasapuram Shaik Ameer Hussain .Array[93]. The State of Andhra Pradesh, pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('0','','cnrorders/taphc/orders/2017/HBHC010262202017_1_2047-06-29.pdf#page=&amp;search=%20');">
+                        <font size="3">WP/9532/2017 of Tholasapuram Shaik Ameer Hussain Vs The State of Andhra Pradesh,
+                        </font>
+                      </button><br><strong>Judge : </strong><br> HON’BLE SRI JUSTICE SURESH KUM<b>a</b>R K<b>a</b>IT
+                      <b>a</b>ND THE HON’BLE DR. JUSTICE SH<b>a</b>MEEM <b>a</b>KTHER W.P.NO.9532 OF 2017 OR<b>a</b>L
+                      ORDER (Per the Hon’ble Sri Justice Suresh Kum<b>a</b>r K<b>a</b>it) This writ petition is filed
+                      for the following relief: For <b>a</b> writ, order or direction <b>a</b>nd more
+                      p<b>a</b>rticul<b>a</b>rly<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR
+                          :</span>
+                        <font color="green"> HBHC010262202017</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 16-03-2017</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 29-06-2047</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> DISMISSED NO COSTS</font><br><span style="opacity: 0.5;">Court : High Court
+                          for State of Telangana</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1 dtr-control">2</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_1"
+                        aria-label="RFA/899/2005 of A RAFI AHMED S/O LATE AKBAR .Array[93]. P VARADARAJU pdf" href="#"
+                        onclick="javascript:open_pdf('1','','cnrorders/karnataka_bng_old/orders/2005/KAHC010270492005_1_2019-12-04.pdf#page=&amp;search=%20');">
+                        <font size="3">RFA/899/2005 of A RAFI AHMED S/O LATE AKBAR Vs P VARADARAJU</font>
+                      </button><br><strong>Judge : V SRISHANANDA</strong><br> THE HIGH COURT OF
+                      K<b>a</b>RN<b>a</b>T<b>a</b>K<b>a</b> <b>a</b>T BENG<b>a</b>LURU D<b>a</b>TED THIS THE 4TH
+                      D<b>a</b>Y OF DECEMBER, 2019 BEFORE THE HON’BLE MR. JUSTICE N.K. SUDHINDR<b>a</b>R<b>a</b>O
+                      R.F.<b>a</b>.No.899/2005 BETWEEN: <b>a</b> R<b>a</b>FI <b>a</b>HMED S/O L<b>a</b>TE
+                      <b>a</b>KB<b>a</b>R SINCE DECE<b>a</b>SED REPRESENTED BY HIS LEG<b>a</b>L HEIR 1. SMT. S H
+                      MEHURURNNIS<b>a</b> W/O L<b>a</b>TE <b>a</b> <b>a</b>HMED, <b>a</b>GED <b>a</b>BOUT 64
+                      YE<b>a</b>RS. 2 . SRI V<b>a</b>JEED <b>a</b>HMED R <b>a</b> S/O L<b>a</b>TE <b>a</b> R<b>a</b>FI
+                      <b>a</b>HMED, MUSLIM <b>a</b>GED 39 YE<b>a</b>RS. 3 . SMT.Y<b>a</b>SMEEN B<b>a</b>NU W/O SRI
+                      <b>a</b>SL<b>a</b>M <b>a</b>LI <b>a</b>ND D/O L<b>a</b>TE <b>a</b> R<b>a</b>FI <b>a</b>HMED. 4.
+                      SRI S<b>a</b>JEED <b>a</b>HMED. R.<b>a</b>. S/O L<b>a</b>TE <b>a</b> R<b>a</b>FI <b>a</b>HMED 1 TO
+                      4 N<b>a</b>MED <b>a</b>BOVE <b>a</b>RE <b>a</b>LL RESIDING <b>a</b>T HOUSE No.65, III
+                      CROSS,<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> KAHC010270492005</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 21-06-2005</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 18-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> DISPOSED</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Karnataka</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1 dtr-control">3</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_2"
+                        aria-label="MSA/100035/2021 of NELAPPA S/O. YALLAPPA .Array[93]. THE ASSISTANT COMMISSIONER pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('2','','cnrorders/karhcdharwad/orders/2021/KAHC020212532021_1_2022-11-09.pdf#page=&amp;search=%20');">
+                        <font size="3">MSA/100035/2021 of NELAPPA S/O. YALLAPPA Vs THE ASSISTANT COMMISSIONER</font>
+                      </button><br><strong>Judge : K.S.HEMALEKHA</strong><br> could be seen from the
+                      <b>a</b>ppe<b>a</b>l p<b>a</b>pers, the <b>a</b>ppe<b>a</b>l is filed on 06.09.2021. Now we
+                      <b>a</b>re in the month of November 2022. It’s been <b>a</b> ye<b>a</b>r. So f<b>a</b>r office
+                      objections <b>a</b>re not complied with. <b>a</b>s <b>a</b>lre<b>a</b>dy noted <b>a</b>bove, there
+                      is no represent<b>a</b>tion on beh<b>a</b>lf of <b>a</b>ppell<b>a</b>nt. Hence, the
+                      Miscell<b>a</b>neous<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> KAHC020212532021</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 09-12-2021</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 18-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> DISPOSED</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Karnataka</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1 dtr-control">4</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_3"
+                        aria-label="Bail App/280/2023 of TASADAQ HUSSAIN ALIAS MAAKA TH SALEEMA BIBI .Array[93]. U T OF J AND K TH SHO POLICE STATION BARI BRAHMANA SAMBA pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('3','','cnrorders/jammuhc/orders/2023/JKHC020059062023_4_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">Bail App/280/2023 of TASADAQ HUSSAIN ALIAS MAAKA TH SALEEMA BIBI Vs U T OF J AND
+                          K TH SHO POLICE STATION BARI BRAHMANA SAMBA</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE RAJNESH OSWAL</strong><br>
+                      compl<b>a</b>in<b>a</b>nt, n<b>a</b>mely, <b>a</b>bdul R<b>a</b>shid submitted <b>a</b> written
+                      <b>a</b>pplic<b>a</b>tion for registr<b>a</b>tion of FIR <b>a</b>g<b>a</b>inst the number of
+                      <b>a</b>ccused persons including the petitioner, thereby st<b>a</b>ting th<b>a</b>t on 03.10.2022
+                      his m<b>a</b>tern<b>a</b>l uncle, Z<b>a</b>kir Huss<b>a</b>in <b>a</b>longwith B<b>a</b>shir,
+                      B<b>a</b>gh Huss<b>a</b>in <b>a</b>nd K<b>a</b>lu h<b>a</b>d gone to B<b>a</b>lole
+                      N<b>a</b>ll<b>a</b>h, Br<b>a</b>hm<b>a</b>n<b>a</b> for <b>a</b>ttending the
+                      m<b>a</b>rri<b>a</b>ge function <b>a</b>nd while returning when they re<b>a</b>ched Peer
+                      B<b>a</b>b<b>a</b> in their <b>a</b>lto C<b>a</b>r <b>a</b>t <b>a</b>bout 2240 hours, <b>a</b>ll
+                      the <b>a</b>ccused persons c<b>a</b>me there in <b>a</b> M<b>a</b>hindr<b>a</b> Lo<b>a</b>d
+                      C<b>a</b>rrier <b>a</b>nd due to old enmity, hit the <b>a</b>lto C<b>a</b>r <b>a</b>nd forcibly
+                      <b>a</b>bducted them in the <b>a</b>bove s<b>a</b>id M<b>a</b>hindr<b>a</b><br><strong
+                        class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC020059062023</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 07-11-2023</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Dismissed</font><br><span style="opacity: 0.5;">Court : High Court of Jammu
+                          and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1 dtr-control">5</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_4"
+                        aria-label="WP(C)/859/2020 of N C PRABHAKAR .Array[93]. UNION OF INDIA NATIONAL RURAL HEALTH MISSION TH MISSION DIRECTOR AND ANOTHER. pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('4','','cnrorders/jammuhc/orders/2020/JKHC020015112020_2_2020-06-12.pdf#page=&amp;search=%20');">
+                        <font size="3">WP(C)/859/2020 of N C PRABHAKAR Vs UNION OF INDIA NATIONAL RURAL HEALTH MISSION
+                          TH MISSION DIRECTOR AND ANOTHER.</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE PUNEET GUPTA</strong><br> the jurisdiction to
+                      decide the lis is not with the Tribun<b>a</b>l. 2. Considering the <b>a</b>fores<b>a</b>id
+                      f<b>a</b>ct, let the record of the present c<b>a</b>se be tr<b>a</b>nsferred to C<b>a</b>T,
+                      J<b>a</b>mmu Bench, however, ret<b>a</b>ining <b>a</b> soft copy thereof for record. 3. The
+                      p<b>a</b>rties <b>a</b>re directed to <b>a</b>ppe<b>a</b>r before the Tribun<b>a</b>l<br><strong
+                        class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC020015112020</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 12-03-2020</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Disposed Off</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1 dtr-control">6</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_5"
+                        aria-label="CRM(M)/885/2022 of VARINDER KUMAR KHULLAR .Array[93]. M/S MAHADEV TRADERS TH SIDDHARTH DALUJA AND OTHERS pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('5','','cnrorders/jammuhc/orders/2022/JKHC020054842022_4_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">CRM(M)/885/2022 of VARINDER KUMAR KHULLAR Vs M/S MAHADEV TRADERS TH SIDDHARTH
+                          DALUJA AND OTHERS</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE RAJNESH OSWAL</strong><br> <b>a</b>ct, 1881 (for
+                      short, the N.I. <b>a</b>ct) in <b>a</b> compl<b>a</b>int, titled “M/s M<b>a</b>h<b>a</b>dev
+                      Tr<b>a</b>ders <b>a</b>nd <b>a</b>nr. vs. <b>a</b>run Kum<b>a</b>r <b>a</b>nd others”. 2). The
+                      petitioner h<b>a</b>s impugned the order d<b>a</b>ted 06.12.2021 on the ground th<b>a</b>t the
+                      le<b>a</b>rned tri<b>a</b>l court h<b>a</b>s issued the process <b>a</b>g<b>a</b>inst the
+                      petitioner in <b>a</b> routine m<b>a</b>nner of M/s Joginder N<b>a</b>th V<b>a</b>rinder
+                      Kum<b>a</b>r, <b>a</b>s there w<b>a</b>s no m<b>a</b>teri<b>a</b>l or specific
+                      <b>a</b>lleg<b>a</b>tion in the compl<b>a</b>int in respect of the role pl<b>a</b>yed by the
+                      petitioner in the tr<b>a</b>ns<b>a</b>ctions. It is <b>a</b>lso st<b>a</b>ted th<b>a</b>t
+                      <b>a</b>s the petitioner w<b>a</b>s the resident of R<b>a</b>jouri, <b>a</b> District beyond the
+                      territori<b>a</b>l jurisdiction<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR
+                          :</span>
+                        <font color="green"> JKHC020054842022</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 02-11-2022</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Disposed Off</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1 dtr-control">7</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_6"
+                        aria-label="CRLP/12312/2023 of Venkat Ravi Naik Rudravath .Array[93]. The State of Telangana pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('6','','cnrorders/taphc/orders/2023/HBHC010625132023_1_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">CRLP/12312/2023 of Venkat Ravi Naik Rudravath Vs The State of Telangana</font>
+                      </button><br><strong>Judge : K.SURENDER</strong><br> compl<b>a</b>in<b>a</b>nt received injuries
+                      elsewhere <b>a</b>nd filed <b>a</b> f<b>a</b>lse compl<b>a</b>int <b>a</b>g<b>a</b>inst these
+                      petitioners involving <b>a</b>ll the f<b>a</b>mily members. 2 5. On the other h<b>a</b>nd,
+                      le<b>a</b>rned <b>a</b>ddition<b>a</b>l Public Prosecutor would submit th<b>a</b>t the
+                      b<b>a</b>sis for <b>a</b>tt<b>a</b>ck is due to politic<b>a</b>l re<b>a</b>sons. 6. Keeping in
+                      view Officer, Pedd<b>a</b>koth<b>a</b>p<b>a</b>lly Police St<b>a</b>tion,
+                      N<b>a</b>g<b>a</b>rkurnool District, on or before 26.12.2023. Upon such surrender, the s<b>a</b>id
+                      St<b>a</b>tion House Officer sh<b>a</b>ll rele<b>a</b>se the petitioners/<b>a</b>ccused Nos.1 to
+                      30 on b<b>a</b>il, on their executing person<b>a</b>l bond for <b>a</b> sum of Rs.10,000/- (Rupees
+                      Ten Thous<b>a</b>nd<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> HBHC010625132023</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 13-12-2023</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> DISPOSED OF NO COSTS</font><br><span style="opacity: 0.5;">Court : High
+                          Court for State of Telangana</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1 dtr-control">8</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_7"
+                        aria-label="WP(Crl)/662/2022 of KHURSHEED AHMAD SANAIE .Array[93]. UNION TERRITORY OF J AND K AND ANR. (HOME DEPARTMENT) pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('7','','cnrorders/kashmirhc/orders/2022/JKHC010048972022_8_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">WP(Crl)/662/2022 of KHURSHEED AHMAD SANAIE Vs UNION TERRITORY OF J AND K AND ANR.
+                          (HOME DEPARTMENT)</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE SANJAY DHAR</strong><br> brevity
+                      “Det<b>a</b>ining <b>a</b>uthority”). In terms of the <b>a</b>fores<b>a</b>id order, Khursheed
+                      <b>a</b>hm<b>a</b>d S<b>a</b>n<b>a</b>ie son of L<b>a</b>te Moh<b>a</b>mm<b>a</b>d
+                      Sh<b>a</b>b<b>a</b>n S<b>a</b>n<b>a</b>ie resident of F<b>a</b>llchill Kh<b>a</b>ns<b>a</b>hib,
+                      Budg<b>a</b>m, h<b>a</b>s been pl<b>a</b>ced under preventive detention <b>a</b>nd lodged in
+                      Centr<b>a</b>l J<b>a</b>il, Kotbh<b>a</b>lw<b>a</b>l, in order to prevent him from <b>a</b>cting
+                      in <b>a</b> prejudici<b>a</b>l to the security of UT. 2) The petitioner h<b>a</b>s contended
+                      th<b>a</b>t the det<b>a</b>ining <b>a</b>uthority h<b>a</b>s p<b>a</b>ssed the impugned detention
+                      order mech<b>a</b>nic<b>a</b>lly without <b>a</b>pplic<b>a</b>tion of mind <b>a</b>s the grounds
+                      of detention <b>a</b>re mere P <b>a</b> g e | 2 reproduction of the dossier. It h<b>a</b>s
+                      been<br><strong class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC010048972022</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 29-09-2022</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Disposed Off</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="odd">
+                    <td class="sorting_1 dtr-control">9</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_8"
+                        aria-label="Bail App/273/2022 of PRITAM SINGH .Array[93]. UT OF J AND K TH PS RAMNAGAR pdf"
+                        href="#"
+                        onclick="javascript:open_pdf('8','','cnrorders/jammuhc/orders/2022/JKHC020040272022_13_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">Bail App/273/2022 of PRITAM SINGH Vs UT OF J AND K TH PS RAMNAGAR</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE RAJNESH OSWAL</strong><br> mess<b>a</b>ges or
+                      c<b>a</b>ll to the prosecutrix <b>a</b>nd h<b>a</b>d never sent <b>a</b>ny obscene picture. It is
+                      further st<b>a</b>ted th<b>a</b>t even the <b>a</b>lleged photogr<b>a</b>phs <b>a</b>re not
+                      <b>a</b>nnexed with the ch<b>a</b>rge-sheet by the Investig<b>a</b>ting Officer. He h<b>a</b>s
+                      r<b>a</b>ised <b>a</b> defence th<b>a</b>t his Wh<b>a</b>ts<b>a</b>pp <b>a</b>ccount might
+                      h<b>a</b>ve been h<b>a</b>cked by someone. The <b>a</b>pplic<b>a</b>nt, n<b>a</b>mely, R<b>a</b>vi
+                      Kum<b>a</b>r h<b>a</b>s filed <b>a</b>n <b>a</b>pplic<b>a</b>tion be<b>a</b>ring No. 406/2022 for
+                      gr<b>a</b>nt of b<b>a</b>il, thereby st<b>a</b>ting th<b>a</b>t he w<b>a</b>s <b>a</b>rrested on
+                      17.05.2021 in <b>a</b> f<b>a</b>lse <b>a</b>nd frivolous FIR <b>a</b>nd the
+                      <b>a</b>lleg<b>a</b>tions levelled <b>a</b>g<b>a</b>inst the petitioner <b>a</b>re v<b>a</b>gue.
+                      The <b>a</b>pplic<b>a</b>nt w<b>a</b>s ch<b>a</b>rged on 01.01.2022 <b>a</b>nd<br><strong
+                        class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC020040272022</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 17-08-2022</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Dismissed</font><br><span style="opacity: 0.5;">Court : High Court of Jammu
+                          and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                  <tr role="row" class="even">
+                    <td class="sorting_1 dtr-control">10</td>
+                    <td><button type="button" role="link" class="btn btn-link p-0 text-start" id="link_9"
+                        aria-label="SWP/599/2003 of DILWINDER SINGH .Array[93]. UNION OF INDIA AND ORS. pdf" href="#"
+                        onclick="javascript:open_pdf('9','','cnrorders/jammuhc/orders/2003/JKHC020066642003_11_2023-12-16.pdf#page=&amp;search=%20');">
+                        <font size="3">SWP/599/2003 of DILWINDER SINGH Vs UNION OF INDIA AND ORS.</font>
+                      </button><br><strong>Judge : HON'BLE MR. JUSTICE RAJNESH OSWAL</strong><br> Cor<b>a</b>m: HON’BLE
+                      MR. JUSTICE R<b>a</b>JNESH OSW<b>a</b>L, JUDGE JUDGMENT 1. The petitioner who w<b>a</b>s
+                      <b>a</b>ppointed <b>a</b>s <b>a</b> const<b>a</b>ble on 19.11.1991 in the CRPF, w<b>a</b>s removed
+                      from service with effect from 16.05.2001 vide order d<b>a</b>ted 15.05.2001 p<b>a</b>ssed by the
+                      respondent No. 6. The petitioner <b>a</b>ss<b>a</b>iled punishments could h<b>a</b>ve been imposed
+                      upon the petitioner <b>a</b>nd the Section 11 of the CRPF <b>a</b>ct does not contempl<b>a</b>te
+                      the punishment of remov<b>a</b>l from service. It is <b>a</b>lso urged by the petitioner
+                      th<b>a</b>t the respondents h<b>a</b>ve imposed <b>a</b> m<b>a</b>jor punishment, which is
+                      disproportion<b>a</b>te to the <b>a</b>lleged <b>a</b>ct<br><strong class="caseDetailsTD"><span
+                          style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC020066642003</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 08-04-2003</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Disposed Off</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+                      </strong></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="dataTables_info" id="example_pdf_info" role="status" aria-live="polite">Showing 1 to 10 of
+                8,828,531 entries</div>
+              <div class="dataTables_paginate paging_full" id="example_pdf_paginate"><a
+                  class="paginate_button first disabled" aria-controls="example_pdf" data-dt-idx="0" tabindex="0"
+                  id="example_pdf_first">First</a><a class="paginate_button previous disabled"
+                  aria-controls="example_pdf" data-dt-idx="1" tabindex="0" id="example_pdf_previous">Previous</a><a
+                  class="paginate_button next" aria-controls="example_pdf" data-dt-idx="2" tabindex="0"
+                  id="example_pdf_next">Next</a><a class="paginate_button last" aria-controls="example_pdf"
+                  data-dt-idx="3" tabindex="0" id="example_pdf_last">Last</a></div>
+            </div>
+          </div>
+
+
+
+
+        </div>
+        <div class="col-md-3 text-start">
+          <h2 class="colHeading my-2"><i class="fas fa-link"></i>&nbsp; Related Topics</h2>
+          <div class="border rounded mb-3" id="div_court_dtls">
+            <div class="p-2 border-bottom filterHeadT"><i class="fas fa-university"></i><span id="li_court">Court</span>
+            </div>
+            <div class="filterUL" id="fil_court_name">
+              <ul class="p-0 m-0">
+                <li><a class="noToken" href="javascript:get_details('','','27','Bombay High Court');">Bombay High
+                    Court&nbsp;<span class="badge rounded-pill text-bg-light">992014</span></a></li>
+                <li><a class="noToken" href="javascript:get_details('','','10','Patna High Court');">Patna High
+                    Court&nbsp;<span class="badge rounded-pill text-bg-light">946016</span></a></li>
+                <li><a class="noToken" href="javascript:get_details('','','3','High Court of Punjab and Haryana');">High
+                    Court of Punjab and Haryana&nbsp;<span class="badge rounded-pill text-bg-light">872886</span></a>
+                </li>
+                <li><a class="noToken" href="javascript:get_details('','','33','Madras High Court');">Madras High
+                    Court&nbsp;<span class="badge rounded-pill text-bg-light">791331</span></a></li>
+                <li><a class="noToken" href="javascript:get_details('','','32','High Court of Kerala');">High Court of
+                    Kerala&nbsp;<span class="badge rounded-pill text-bg-light">755391</span></a></li>
+              </ul>
+              <div class="text-end border-top p-1"><button type="button" data-bs-toggle="modal"
+                  data-bs-target="#MoreModal2" class="btn badge rounded-pill text-bg-light"
+                  aria-label="more about High Court">More</button> </div>
+              <div class="modal fade" id="MoreModal2">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+
+                    <div class="modal-header">
+                      <h4 class="modal-title">High Court</h4>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+
+                    <div class="modal-body">
+                      <ul>
+                        <li><a class="noToken" href="javascript:get_details('','','27','Bombay High Court');">Bombay
+                            High Court&nbsp;<span class="badge rounded-pill text-bg-light">992014</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','10','Patna High Court');">Patna High
+                            Court&nbsp;<span class="badge rounded-pill text-bg-light">946016</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','3','High Court of Punjab and Haryana');">High Court of
+                            Punjab and Haryana&nbsp;<span class="badge rounded-pill text-bg-light">872886</span></a>
+                        </li>
+                        <li><a class="noToken" href="javascript:get_details('','','33','Madras High Court');">Madras
+                            High Court&nbsp;<span class="badge rounded-pill text-bg-light">791331</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','32','High Court of Kerala');">High
+                            Court of Kerala&nbsp;<span class="badge rounded-pill text-bg-light">755391</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','8','High Court of Rajasthan');">High
+                            Court of Rajasthan&nbsp;<span class="badge rounded-pill text-bg-light">563873</span></a>
+                        </li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','23','High Court of Madhya Pradesh');">High Court of
+                            Madhya Pradesh&nbsp;<span class="badge rounded-pill text-bg-light">541036</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','9','Allahabad High Court');">Allahabad High
+                            Court&nbsp;<span class="badge rounded-pill text-bg-light">503944</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','29','High Court of Karnataka');">High
+                            Court of Karnataka&nbsp;<span class="badge rounded-pill text-bg-light">466370</span></a>
+                        </li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','36','High Court  for State of Telangana');">High Court
+                            for State of Telangana&nbsp;<span class="badge rounded-pill text-bg-light">403768</span></a>
+                        </li>
+                        <li><a class="noToken" href="javascript:get_details('','','21','High Court of Orissa');">High
+                            Court of Orissa&nbsp;<span class="badge rounded-pill text-bg-light">348790</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','22','High Court of Chhattisgarh');">High Court of
+                            Chhattisgarh&nbsp;<span class="badge rounded-pill text-bg-light">251325</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','24','High Court of Gujarat');">High
+                            Court of Gujarat&nbsp;<span class="badge rounded-pill text-bg-light">239833</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','20','High Court of Jharkhand');">High
+                            Court of Jharkhand&nbsp;<span class="badge rounded-pill text-bg-light">226930</span></a>
+                        </li>
+                        <li><a class="noToken" href="javascript:get_details('','','7','High Court of Delhi');">High
+                            Court of Delhi&nbsp;<span class="badge rounded-pill text-bg-light">179371</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','18','Gauhati High Court');">Gauhati
+                            High Court&nbsp;<span class="badge rounded-pill text-bg-light">161314</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','19','Calcutta High Court');">Calcutta
+                            High Court&nbsp;<span class="badge rounded-pill text-bg-light">140985</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','2','High Court of Himachal Pradesh');">High Court of
+                            Himachal Pradesh&nbsp;<span class="badge rounded-pill text-bg-light">135830</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','5','High Court of Uttarakhand');">High Court of
+                            Uttarakhand&nbsp;<span class="badge rounded-pill text-bg-light">121770</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','28','High Court of Andhra Pradesh');">High Court of
+                            Andhra Pradesh&nbsp;<span class="badge rounded-pill text-bg-light">113904</span></a></li>
+                        <li><a class="noToken"
+                            href="javascript:get_details('','','1','High Court of Jammu and Kashmir');">High Court of
+                            Jammu and Kashmir&nbsp;<span class="badge rounded-pill text-bg-light">45728</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','16','High Court of Tripura');">High
+                            Court of Tripura&nbsp;<span class="badge rounded-pill text-bg-light">23228</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','14','High Court of Manipur');">High
+                            Court of Manipur&nbsp;<span class="badge rounded-pill text-bg-light">8737</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','17','High Court of Meghalaya');">High
+                            Court of Meghalaya&nbsp;<span class="badge rounded-pill text-bg-light">5832</span></a></li>
+                        <li><a class="noToken" href="javascript:get_details('','','11','High Court of Sikkim');">High
+                            Court of Sikkim&nbsp;<span class="badge rounded-pill text-bg-light">1523</span></a></li>
+                      </ul>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger btn-sm p-0 px-2 rounded" data-bs-dismiss="modal">
+                        Close </button>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="border rounded mb-3">
+            <div class="p-2 border-bottom filterHeadT"><i class="fas fa-user"></i>&nbsp; Judges <button
+                class="btn btn-sm btn-secondary float-end p-0 px-2" id="judges_btn"
+                onclick="get_details('','','','','','Y','')">Show </button></div>
+            <div class="filterUL" id="fil_judge_name"></div>
+          </div>
+
+          <div class="border rounded">
+            <div class="p-2 border-bottom filterHeadT"><i class="fas fa-calendar-alt"></i>&nbsp; <span
+                id="disp_year">Disposal Year</span><button class="btn btn-sm btn-secondary float-end p-0 px-2"
+                id="year_btn" onclick="get_details('','','','','','','Y')">Show </button></div>
+            <div class="filterUL" id="fil_year"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <a id="topbutton" class="btn btn-primary btn-sm"><i class="fa fa-arrow-up"></i></a>
+
+
+
+
+
+    <div class="modal fade" id="viewFiles" tabindex="-1" role="dialog">
+      <div class="modal-dialog mw-100 w-75 m-auto" role="document">
+        <div class="modal-content">
+          <div class="modal-header border-0 p-0 pr-3">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="modal_close">
+              <span aria-hidden="true">&nbsp;</span>
+            </button>
+          </div>
+
+          <div class="modal-body row" style="display:block;">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="btn_pdf" data-bs-toggle="tab" data-bs-target="#viewFiles-body"
+                  type="button" role="tab" aria-controls="home" aria-selected="true">PDF</button>
+              </li>
+              <li class="nav-item" role="presentation" id="li_html" style="display:none">
+                <button class="nav-link" id="btn_html" data-bs-toggle="tab" data-bs-target="#view-HTML" type="button"
+                  role="tab" aria-controls="profile" aria-selected="false" tabindex="-1">HTML</button>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+              <div class="tab-pane fade show active p-3" id="viewFiles-body" role="tabpanel" aria-labelledby="home-tab">
+                .pdf..</div>
+              <div class="tab-pane fade p-3" id="view-HTML" role="tabpanel" aria-labelledby="profile-tab">
+                <ul class="nav nav-tabs" id="myTab" role="tablist">
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="fullJudgment-tab" data-bs-toggle="tab"
+                      data-bs-target="#fullJudgment" type="button" role="tab" aria-controls="fulljudgment"
+                      aria-selected="true" onclick="showBK()">Full Judgment</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="headnote-tab" data-bs-toggle="tab" data-bs-target="#headnote"
+                      type="button" role="tab" aria-controls="headnote" aria-selected="false" onclick="hideBK()"
+                      tabindex="-1">Headnote</button>
+                  </li>
+
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="held-tab" data-bs-toggle="tab" data-bs-target="#held" type="button"
+                      role="tab" aria-controls="held" aria-selected="false" onclick="hideBK()"
+                      tabindex="-1">Held</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="actSection-tab" data-bs-toggle="tab" data-bs-target="#actSection"
+                      type="button" role="tab" aria-controls="actsection" aria-selected="false" onclick="hideBK()"
+                      tabindex="-1">Act / Section</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="citation-tab" data-bs-toggle="tab" data-bs-target="#citation"
+                      type="button" role="tab" aria-controls="citation" aria-selected="false" onclick="hideBK()"
+                      tabindex="-1">Citation</button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="decision-tab" data-bs-toggle="tab" data-bs-target="#decision"
+                      type="button" role="tab" aria-controls="decision" aria-selected="false" onclick="hideBK()"
+                      tabindex="-1">Decision</button>
+                  </li>
+                  <li class="nav-item" id="show_bookmark1">
+                    <button class="dropdown-toggle nav-link" data-bs-toggle="dropdown" href="#"
+                      id="show_bookmark">Bookmark
+                      <span class="caret"></span></button>
+                    <ul class="dropdown-menu" id="bookmark">
+
+                    </ul>
+                  </li>
+                </ul>
+
+                <div class="tab-content" id="HTMLTabContent">
+                  <div class="tab-pane fade show active border p-2" id="fullJudgment" role="tabpanel"
+                    aria-labelledby="fullJudgment-tab">ffffffffffffffffffff</div>
+                  <div class="tab-pane fade border p-2" id="headnote" role="tabpanel" aria-labelledby="headnote-tab">
+                    Headnote</div>
+                  <div class="tab-pane fade border p-2" id="held" role="tabpanel" aria-labelledby="held-tab">
+                    hhhhhhhhhhhhhhhh</div>
+                  <div class="tab-pane fade border p-2" id="actSection" role="tabpanel"
+                    aria-labelledby="actSection-tab">Act - Section</div>
+                  <div class="tab-pane fade border p-2" id="citation" role="tabpanel" aria-labelledby="citation-tab">
+                  </div>
+                  <div class="tab-pane fade border p-2" id="decision" role="tabpanel" aria-labelledby="decision-tab">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- More Content Modal -->
+  <div class="modal fade" id="MoreModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Judge Name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&nbsp;</button>
+        </div>
+        <div class="modal-body">
+          <div class="filterUL filterUL1 text-start" id="fil_judge_name">
+
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <input type="hidden" name="txt_base_url" id="txt_base_url" value="/pdfsearch">
+  <input type="hidden" name="judge_val" id="judge_val" value="">
+  <input type="hidden" name="judge_arr" id="judge_arr" value="">
+  <input type="hidden" name="year_val" id="year_val" value="">
+  <input type="hidden" name="act_val" id="act_val" value="">
+  <input type="hidden" name="state_val" id="state_val" value="">
+  <input type="hidden" name="state_code_val" id="state_code_val" value="">
+
+  <input type="hidden" name="search_text_1" id="search_text_1" value="a">
+  <input type="hidden" name="search_text_2" id="search_text_2" value="">
+  <input type="hidden" name="search_text_3" id="search_text_3" value="">
+  <input type="hidden" name="search_text_4" id="search_text_4" value="">
+  <input type="hidden" name="search_text_5" id="search_text_5" value="">
+  <input type="hidden" name="path" id="path" value="">
+  <input type="hidden" name="file_type" id="file_type" value="">
+  <!--<input type='hidden' name='fcourt_type' id='fcourt_type' value="2">  -->
+
+  <input type="hidden" name="escr_flag" id="escr_flag" value="">
+  <input type="hidden" name="flag" id="flag" value="">
+  <input type="hidden" name="nfs_rel_path" id="nfs_rel_path" value="/judgments_lib/">
+  <input type="hidden" name="hiddenLabBench" id="hiddenLabBench" value="Bench">
+  <input type="hidden" name="hiddenLabCitYr" id="hiddenLabCitYr" value="Citation Year">
+
+  <input type="hidden" name="hiddenLabCourt" id="hiddenLabCourt" value="Court">
+  <input type="hidden" name="hiddenLabDispYr" id="hiddenLabDispYr" value="Disposal Year">
+
+  <input type="hidden" name="hiddenLabCaptcha" id="hiddenLabCaptcha" value="Disposal Year">
+
+  <input type="hidden" name="hiddenLabAbout" id="hiddenLabAbout" value="About">
+  <input type="hidden" name="hiddenLabResults" id="hiddenLabResults" value="results">
+  <input type="hidden" name="hiddenLabSeconds" id="hiddenLabSeconds" value="seconds">
+
+  <script src="js/jquery.session.js"></script>
+  <script src="js/pdfsearch.js"></script>
+
+
+
+
+
+
+
+
+  <div class="alert alert-danger alert-dismissible" style="text-align:center;display: none;"><a href="#" class="close"
+      data-dismiss="alert" aria-label="close" style="padding: 0px;">×</a>
+    <div id="msg-danger"></div>
+  </div>
+  <div class="alert alert-success alert-dismissible" style="text-align:center;display: none;"><a href="#" class="close"
+      data-dismiss="alert" aria-label="close" style="padding: 0px;">×</a>
+    <div id="msg-success"></div>
+  </div>
+  <div class="alert alert-warning alert-dismissible" style="text-align:center;display: none;"><a href="#" class="close"
+      data-dismiss="alert" aria-label="close" style="padding: 0px;">×</a>
+    <div id="msg-warning"></div>
+  </div>
+  <div class="alert alert-info alert-dismissible" style="text-align:center;display: none;"><a href="#" class="close"
+      data-dismiss="alert" aria-label="close" style="padding: 0px;">×</a>
+    <div id="msg-info"></div>
+  </div>
+
+
+  <input type="hidden" name="base_url" id="base_url" value="/pdfsearch">
+
+
+  <input type="hidden" name="app_token" id="app_token"
+    value="a32ac2ee35d41daf1f83e1b8a1962a9e7b352dd665759acda7cc6090f5a35459">
+  <input type="hidden" name="sessionlangid" id="sessionlangid" value="">
+  <input type="hidden" name="level1" id="level1" value="">
+  <input type="hidden" name="link_id" id="link_id" value="">
+
+
+
+  <div class="modal hide" id="loadMe" tabindex="-1" aria-labelledby="loadMeLabel" style="display: none;"
+    aria-hidden="true">
+    <div class="modal-dialog modal-sm" role="document">
+      <div class="modal-content">
+        <div class="modal-body text-center">
+          <img src="images/book.gif" class="loader-gif">
+          <div class="loader-txt">
+            <p>Loading...</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="validateError" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel"
+    style="display:none;">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center align-items-start">
+          <i class="fas fa-3x fa-exclamation-triangle mb-3 text-secondary mx-auto w-100 d-none" id="errorIcon"></i>
+          <i class="fas fa-3x fa-check-circle mb-3 text-success mx-auto w-100 " id="successIcon" aria-hidden="true"></i>
+          <button type="button" class="btn-close" data-bs-dismiss="modal">&nbsp;</button>
+        </div>
+
+        <div class="modal-body p-1 text-center">
+
+          <div clas="loader-txt">
+            <div class="alert alert-danger-cust" style="align:center;text-align:center;word-wrap: break-word;">
+            </div>
+            <div class="alert alert-success-cust"
+              style="align:center;text-align:center;display: none;word-wrap: break-word;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="captcha_modal" tabindex="-1" role="dialog" aria-labelledby="loadMeLabel"
+    style="display:none;">
+    <div class="modal-dialog modal-md" role="document">
+      <div class="modal-content">
+        <div class="modal-header text-center align-items-start">
+          <i class="fas fa-3x fa-exclamation-triangle mb-3 text-secondary mx-auto w-100 d-none" id="errorIcon1"></i>
+
+          <button type="button" class="btn-close" data-bs-dismiss="modal">&nbsp;</button>
+        </div>
+
+        <div class="modal-body p-1 text-center">
+
+          <div clas="loader-txt">
+            <div class="alert alert-danger" id="error_message"
+              style="text-align: center; overflow-wrap: break-word; display: none;">
+
+            </div>
+            <div class="row" id="captcha_modal_div">
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Help Modal -->
+  <div class="modal fade" id="HelpModal" tabindex="-1" aria-labelledby="HelpModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="HelpModalLabel">Help</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">&nbsp;</button>
+        </div>
+        <div class="modal-body">
+          Help Text
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+
+    $('[type="submit"]').attr('type', 'button');
+
+
+
+  </script>
+  <footer class="mt-auto bg-light">
+
+    <div id="footer-container" class="container-fluid clearfix pt-2 mt-2" role="contentinfo">
+      <div class="row topfooter p-0">
+        <div class="col-md-3 border-right">
+          <nav class="row">
+            <!--	  <ol class="col footerlinks">
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/ab&escr_flag=&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">About Us</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/sm&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Site map </a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/cu&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Contact Us</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/as&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Accessibility Statement</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/sr&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Screen Reader Access</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/tc&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Terms and Conditions</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/cp&escr_flag=&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Copyright Policy</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/hl&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Hyper Linking Policy</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/pp&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Privacy Policy</a></li>
+			  <li><a href="/pdfsearch/?p=pdf_search/footerlinks/di&app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Disclaimer</a></li>
+			  </ol>	-->
+
+            <ol class="col footerlinks">
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/ab&amp;escr_flag=&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">About
+                  Us</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/sm&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Site
+                  map </a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/cu&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Contact
+                  Us</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/as&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Accessibility
+                  Statement</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/sr&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Screen
+                  Reader Access</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/tc&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Terms
+                  and Conditions</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/cp&amp;escr_flag=&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Copyright
+                  Policy</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/hl&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Hyper
+                  Linking Policy</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/pp&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Privacy
+                  Policy</a></li>
+              <li><a
+                  href="/pdfsearch/?p=pdf_search/footerlinks/di&amp;app_token=5883a0b99a5be67e6dd629066ef69de9765fc51d8691cdc4ee8e9199cfb55d86">Disclaimer</a>
+              </li>
+            </ol>
+          </nav>
+        </div>
+        <div class="col-md-7 border-right">
+          <div class="row px-2">
+            <div class="col text-lg-left text-center p-0">
+              <ol class="footerlogolist" role="list">
+                <li class="logos" role="listitem">
+                  <a href="http://www.digitalindia.gov.in/" target="_blank"
+                    title="Digital India External website that opens a new window"
+                    aria-label="Digital India opens a new window" rel="noopener noreferrer">
+                    <img class="digital-india fooimg" src="images/di-logo.png"
+                      alt="Digital India External website that opens a new window">
+                  </a>
+                </li>
+                <li class="logos" role="listitem">
+                  <a href="http://www.india.gov.in/" target="_blank"
+                    title="National Portal of India External website that opens a new window"
+                    aria-label="National Portal of India opens a new window" rel="noopener noreferrer">
+                    <img class="india-gov-logo fooimg" src="images/india-gov-logo.png"
+                      alt="National Portal of India External website that opens a new window">
+                  </a>
+                </li>
+                <li class="logos" role="listitem">
+                  <a href="http://www.doj.gov.in/" target="_blank"
+                    title="Department of Justice External website that opens a new window"
+                    aria-label="Department of Justice opens a new window" rel="noopener noreferrer">
+                    <img class="doj-logo fooimg" src="images/DOJ-logo.png"
+                      alt="Department of Justice External website that opens a new window">
+                  </a>
+                </li>
+                <li class="logos" role="listitem">
+                  <a href="https://ecommitteesci.gov.in/" target="_blank"
+                    title="e-Committee Supreme Court of India External website that opens a new window"
+                    aria-label="e-committee supreme court of india opens a new window" rel="noopener noreferrer">
+                    <img class="fooimg" src="images/ecommittee-logo.png"
+                      alt="e-Committee Supreme Court of India External website that opens a new window">
+                  </a>
+                </li>
+                <li class="logos" role="listitem">
+                  <a href="http://indiacode.nic.in/" target="_blank"
+                    title="India Code External website that opens a new window"
+                    aria-label="India Code opens a new window" rel="noopener noreferrer">
+                    <img class="fooimg" src="images/IC-logo.png"
+                      alt="India Code Centre External website that opens a new window">
+                  </a>
+                </li>
+                <li class="logos" role="listitem">
+                  <a href="https://www.nic.in/" target="_blank"
+                    title="National Informatics Centre External website that opens a new window"
+                    aria-label="National Informatics Centre opens a new window" rel="noopener noreferrer">
+                    <img class="fooimg" src="images/NIC-logo.png"
+                      alt="National Informatics Centre External website that opens a new window">
+                  </a>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="row px-2">
+            <p class="m-0"> This site is designed, hosted and maintained by <a href="http://www.nic.in/" target="_blank"
+                class="text-info1" title="National Informatics Centre (NIC) External website that opens a new window"
+                aria-label="National Informatics Centre (NIC) opens a new window" rel="noopener noreferrer">National
+                Informatics Centre (NIC) </a> Ministry of Electronics &amp; Information Technology, Government of India.
+            </p>
+          </div>
+        </div>
+        <div class="col-md">
+          <p>Last Reviewed and Updated on : 12-12-2023</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="py-0">
+      <div class="container-fluid">
+        <div class="row px-lg-2">
+
+          <div class="col-2">
+            <p class="p-0 py-2 m-0 text-lg-start text-dark">Version: 2.0</p>
+          </div>
+
+          <div class="col">
+            <p class="p-2 m-0 text-center text-dark">© 2020 eCommittee, Supreme Court of India. All Rights Reserved</p>
+          </div>
+
+          <div class="col-2">
+            <p class="p-0 py-2 m-0 text-lg-end text-dark ">S2</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+  <div id="Select_alert" class="d-none">The best way to access combo boxes is by pressing enter on the box, followed by
+    alt+down arrow which will open the list of options to choose from.</div>
+
+
+  <script>
+
+    var labels_array = null
+    var buttons_array = null
+    var alerts_array = null
+
+
+  </script>
+  <ul id="ui-id-1" tabindex="0" class="ui-menu ui-widget ui-widget-content ui-autocomplete ui-front" unselectable="on"
+    style="display: none;"></ul>
+  <div role="status" aria-live="assertive" aria-relevant="additions" class="ui-helper-hidden-accessible"></div>
+</body><!---   open pdf escr-->
+
+</html>
