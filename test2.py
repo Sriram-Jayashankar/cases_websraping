@@ -1,19 +1,27 @@
 from bs4 import BeautifulSoup
 
-# Load the HTML file
-with open('output_page1.html', 'r', encoding='utf-8') as file:
-    html_content = file.read()
+html_doc='''<strong class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+<font color="green"> JKHC020066642003</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+<font color="green"> 08-04-2003</font><span style="color:#212F3D"> | Decision Date :</span>
+<font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+<font color="green"> Disposed Off</font><br/><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+</strong>
+<strong
+                        class="caseDetailsTD"><span style="color:#212F3D"> CNR :</span>
+                        <font color="green"> JKHC020015112020</font><span style="color:#212F3D"> | Date of registration
+                          :</span>
+                        <font color="green"> 12-03-2020</font><span style="color:#212F3D"> | Decision Date :</span>
+                        <font color="green"> 16-12-2023</font><span style="color:#212F3D"> | Disposal Nature :</span>
+                        <font color="green"> Disposed Off</font><br><span style="opacity: 0.5;">Court : High Court of
+                          Jammu and Kashmir</span>
+                      </strong>'''
+soup =BeautifulSoup(html_doc,"html.parser")
 
-# Create BeautifulSoup object
-soup = BeautifulSoup(html_content, 'html.parser')
+elements=soup.find_all("font",attrs={"color": "green"})
+courts=soup.find_all("span",attrs={"style":"opacity: 0.5;"})
+print(courts)
 
-# Find the target element (e.g., based on ID)
-target_element = soup.find('tr', {"role":"row" ,"class":"odd"})  # Replace with the actual ID or other identifying attribute
-
-# Find all parents of the target element
-parents = list(target_element.parents)
-
-# Print the parents
-for parent in parents:
-    print(parent.prettify())  # You can use .prettify() to print the HTML structure nicely
-    print('\n' + '-'*50 + '\n')  # Separation line for better readability
+values=[element.get_text(strip=True)for element in elements]
+print(values)

@@ -1,40 +1,39 @@
+# extract_data.py
+
 from bs4 import BeautifulSoup
+import csv
 
-html = '''
-<strong class="caseDetailsTD">
-    <span style="color:#212F3D"> CNR :</span>
-    <font color="green"> CGHC010304072023</font>
-    <span style="color:#212F3D"> | Date of registration :</span>
-    <font color="green"> 12-09-2023</font>
-    <span style="color:#212F3D"> | Decision Date :</span>
-    <font color="green"> 13-12-2023</font>
-    <span style="color:#212F3D"> | Disposal Nature :</span>
-    <font color="green"> DISPOSED OFF</font>
-    <br>
-    <span style="opacity: 0.5;">Court : High Court Of Chhattisgarh</span>
-</strong>
-'''
+def extract_and_write_cnr_numbers(html_path, file_path):
+    # Read the HTML file
+    with open(html_path, 'r', encoding='utf-8') as file:
+        html_doc = file.read()
 
-soup = BeautifulSoup(html, 'html.parser')
+    soup = BeautifulSoup(html_doc, 'html.parser')
 
-# Extract values
-cnr_span = soup.find('span', string='CNR :')
-cnr = cnr_span.find_next('font', color='green').text.strip() if cnr_span else None
+    # Find all elements with class 'caseDetailsTD'
+    case_details_elements = soup.find_all(class_='caseDetailsTD')
 
-date_of_registration_span = soup.find('span', string='Date of registration :')
-date_of_registration = date_of_registration_span.find_next('font', color='green').text.strip() if date_of_registration_span else None
+    # Extract data for each entry
+    entries_data = []
+    for element in case_details_elements:
+        print(element)
+        # Uncomment and modify these lines for data extraction
+        # cnr = element.find('span', style='color:#212F3D').find_next('font', color='green').text.strip()
+        # date_of_registration = element.find('span', string='Date of registration :').find_next('font', color='green').text.strip()
+        # decision_date = element.find('span', string='Decision Date :').find_next('font', color='green').text.strip()
+        # disposal_nature = element.find('span', string='Disposal Nature :').find_next('font', color='green').text.strip()
+        # court_name = element.find('span', style='opacity: 0.5;').text.strip()
 
-decision_date_span = soup.find('span', string='Decision Date :')
-decision_date = decision_date_span.find_next('font', color='green').text.strip() if decision_date_span else None
+        # entries_data.append([cnr, date_of_registration, decision_date, disposal_nature, court_name])
 
-disposal_nature_span = soup.find('span', string='Disposal Nature :')
-disposal_nature = disposal_nature_span.find_next('font', color='green').text.strip() if disposal_nature_span else None
+    # Write the extracted data to the CSV file
+    with open(file_path, 'a', newline='', encoding='utf-8') as csvfile:
+        csv_writer = csv.writer(csvfile)
+        csv_writer.writerows(entries_data)
 
-court_name_span = soup.find('span', style='opacity: 0.5;')
-court_name = court_name_span.text.strip() if court_name_span else None
+# Specify the path to your local HTML file and the desired output CSV file
+html_path = 'C:/Users/Sriram/Desktop/programming/Webscraping/output_page1.html'
+csv_output_path = 'C:/Users/Sriram/Desktop/programming/Webscraping/cnr_numbers.csv'
 
-print("CNR:", cnr)
-print("Date of Registration:", date_of_registration)
-print("Decision Date:", decision_date)
-print("Disposal Nature:", disposal_nature)
-print("Court Name:", court_name)
+# Call the function with the paths
+extract_and_write_cnr_numbers(html_path, csv_output_path)
