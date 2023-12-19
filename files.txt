@@ -14,3 +14,8 @@ https://judgments.ecourts.gov.in//judgments_lib/tmp/0bae35decbf1a20a3b758bde5473
 
 
 web crawler
+
+
+high court of karnataka
+<div class="tab-pane fade show active p-3" id="viewFiles-body" role="tabpanel" aria-labelledby="home-tab"><object data="/judgments_lib/tmp/1a185b917250e04ab1f742b8cefabfd1b49d6752b203380318abd3ab482ecbba1703004246.pdf" height="100%" width="100%" style="min-height:600px;"></object></div>
+<object data="/judgments_lib/tmp/1d7b7175f98802eecfcd7fc26a5cab8594bab8aebaa5d3ce4a491e25df445ea71703004397.pdf" height="100%" width="100%" style="min-height:600px;"></object>
