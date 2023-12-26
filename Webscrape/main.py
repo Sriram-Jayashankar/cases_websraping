@@ -18,6 +18,7 @@ website_url='https://judgments.ecourts.gov.in/pdfsearch/?p=pdf_search/index&stat
 
 #launch teh driver in particular web 
 driver=webdriver.Chrome()
+driver.maximize_window()
 driver.get(website_url)
 
 try:

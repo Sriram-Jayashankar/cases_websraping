@@ -4,6 +4,7 @@ import os
 def download_pdf(url, filename, download_directory):
     response = requests.get(url)
     if response.status_code == 200:
+        filename = filename.replace('/', '_')
         full_path = os.path.join(download_directory, filename)
         with open(full_path, 'wb') as pdf_file:
             pdf_file.write(response.content)
