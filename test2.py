@@ -23,5 +23,9 @@ elements=soup.find_all("font",attrs={"color": "green"})
 courts=soup.find_all("span",attrs={"style":"opacity: 0.5;"})
 print(courts)
 
-values=[element.get_text(strip=True)for element in elements]
+elements_text=[element.get_text(strip=True)for element in elements]
+courts_text = [court.get_text(strip=True) for court in courts]
+courts_text = [court.get_text(strip=True).replace("Court :", "") for court in courts]
+values = elements_text + courts_text
+
 print(values)

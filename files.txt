@@ -24,3 +24,5 @@ high court of karnataka
 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="modal_close">
           <span aria-hidden="true">&nbsp;</span>
         </button>
+
+        ['HBHC010262202017', '16-03-2017', '29-06-2047', 'DISMISSED NO COSTS', ' High Court  for State of Telangana']

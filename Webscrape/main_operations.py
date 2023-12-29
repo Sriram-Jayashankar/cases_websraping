@@ -10,6 +10,7 @@ import requests
 from bs4 import BeautifulSoup
 
 num=10
+keys = ['/cnr', '/dateOfRegistration', '/decisionDate', '/disposalNature', '/Court']
 def perform_main_operations(driver, num_pages_to_scrape):
     for _ in range(num_pages_to_scrape):
         pdfdownloaded=0
@@ -31,6 +32,15 @@ def perform_main_operations(driver, num_pages_to_scrape):
 
         for td in filtered_td_elements:
             font_data = td.find('font', {'size': '3'})
+            elements=td.find_all("font",attrs={"color": "green"})
+            courts=td.find_all("span",attrs={"style":"opacity: 0.5;"}) 
+            elements_text=[element.get_text(strip=True)for element in elements]
+            courts_text = [court.get_text(strip=True).replace("Court :", "") for court in courts]
+            values = elements_text + courts_text
+            metadata = dict(zip(keys, values))
+
+            print(values)
+     
             # print(font_data.text)
             button = td.find('button')
             print(button)
@@ -54,7 +64,7 @@ def perform_main_operations(driver, num_pages_to_scrape):
 
             #donwloading the pdf
             
-            download_pdf(pdf_link,f'{font_data.text}.pdf', pdf_directory)
+            download_pdf(pdf_link,f'{font_data.text}.pdf', pdf_directory,metadata)
             pdfdownloaded+=1
             close_button = WebDriverWait(driver, 10).until(
                 EC.element_to_be_clickable((By.ID, 'modal_close'))

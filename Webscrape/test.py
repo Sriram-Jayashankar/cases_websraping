@@ -28,14 +28,14 @@ def convert_date(date):
     date='-'.join(date)
     return date
 #can you give an example of how to use the function
-date='29-06-2047'
-date=convert_date(date)
-print(date)
-metadata = {"/decisiondate":date}
-# Use the function
-pdf_metadata = get_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf')
-metadata.update(pdf_metadata)
+# date='29-06-2047'
+# date=convert_date(date)
+# print(date)
+# metadata = {"/decisiondate":date}
+# # Use the function
+# pdf_metadata = get_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf')
+# metadata.update(pdf_metadata)
 
-add_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf', metadata)
-pdf_metadata_final = get_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf')
-print(pdf_metadata_final)
+# add_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf', metadata)
+# pdf_metadata_final = get_pdf_metadata('C:/Users/Sriram/Desktop/programming/Webscraping/Webscrape/testpdfs/WPA_28047_2023 of DIPTENDU CHATTERJEE Vs UNION OF INDIA AND ORS..pdf')
+# print(pdf_metadata_final)
