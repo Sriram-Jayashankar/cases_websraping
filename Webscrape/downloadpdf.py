@@ -13,8 +13,8 @@ def download_pdf(url, filename, download_directory,metadata):
         pdf_metadata = get_pdf_metadata(full_path)
         metadata.update(pdf_metadata)
         add_pdf_metadata(full_path, metadata)
-        print(get_pdf_metadata(full_path))
-        print(f"PDF downloaded successfully to: {full_path}")
+        # print(get_pdf_metadata(full_path))
+        # print(f"PDF downloaded successfully to: {full_path}")
     else:
         print(f"Failed to download PDF. Status code: {response.status_code}")
 

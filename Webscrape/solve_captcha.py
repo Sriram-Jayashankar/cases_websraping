@@ -39,7 +39,20 @@ def solve_captcha(driver):
     )
     search_button.click()
 
-    # # Step 5: Select 1000 entries
+    # Step 5: Execute the JavaScript code
+    # Assuming driver is your Selenium WebDriver instance
+    time.sleep(5)
+    entries_dropdown = WebDriverWait(driver, 10).until(
+        EC.presence_of_element_located((By.NAME, 'example_pdf_length'))
+    )
+    javascript_code = "get_details('','','29','High Court of Karnataka');"
+
+    # Execute the JavaScript code
+    driver.execute_script(javascript_code)
+    time.sleep(5)
+
+
+    # # Step 6: Select 1000 entries
     # entries_dropdown = WebDriverWait(driver, 10).until(
     #     EC.presence_of_element_located((By.NAME, 'example_pdf_length'))
     # )
@@ -47,4 +60,3 @@ def solve_captcha(driver):
     # entries_select.select_by_value('1000')
 
     # Optionally, you can add a delay to wait for the search results to load
-    time.sleep(5)
