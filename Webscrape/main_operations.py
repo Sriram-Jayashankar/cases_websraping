@@ -12,7 +12,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import random
 
-num = 10
+num = 25
 keys = ['/cnr', '/dateOfRegistration', '/decisionDate', '/disposalNature', '/Court']
 
 def perform_main_operations(driver, num_pages_to_scrape):

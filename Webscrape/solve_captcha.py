@@ -45,11 +45,11 @@ def solve_captcha(driver):
     entries_dropdown = WebDriverWait(driver, 10).until(
         EC.presence_of_element_located((By.NAME, 'example_pdf_length'))
     )
-    javascript_code = "get_details('','','29','High Court of Karnataka');"
+    # javascript_code = "get_details('','','29','High Court of Karnataka');"
 
-    # Execute the JavaScript code
-    driver.execute_script(javascript_code)
-    time.sleep(5)
+    # # Execute the JavaScript code
+    # driver.execute_script(javascript_code)
+    # time.sleep(5)
 
 
     # # Step 6: Select 1000 entries
