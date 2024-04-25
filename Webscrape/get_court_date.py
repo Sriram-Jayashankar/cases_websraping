@@ -7,6 +7,12 @@ from tinker import ScrollableFormDialog
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import Select
+from selenium.webdriver import ActionChains
+import os
+import sys
+
+
+
 
 
 
@@ -32,10 +38,15 @@ def extract_court_names(driver):
     
     try:
         close_button = WebDriverWait(driver, 10).until(
-        EC.element_to_be_clickable((By.ID, 'modal_close'))
-    )
+            EC.element_to_be_clickable((By.XPATH, '//button[@data-bs-dismiss="modal"]'))
+        )
+
+# Scroll to the close button
+        driver.execute_script("arguments[0].scrollIntoView();", close_button)
+
+# Click the close button
         close_button.click()
-    except TimeoutException:
+    except :
         # Perform another click using x and y coordinates
         x = 1875  # Replace with the desired x coordinate
         y = 328  # Replace with the desired y coordinate
